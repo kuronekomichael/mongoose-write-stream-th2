@@ -1,14 +1,16 @@
-var through = require('through');
+var through = require('through2');
 
 module.exports = function(schema, options) {
-  schema.static('writeStream', function() {
-    var model = this;
-    return through(function(data) {
-      var stream = this;
-      model.create(data, function(err, res) {
-        err ? stream.emit('error', err)
-            : stream.emit('data', data);
-      });
+    schema.static('writeStream', function() {
+        var model = this;
+        return through.obj(function(data, enc, cb) {
+            var stream = this;
+            model.create(data, function(err, res) {
+                if (!err) {
+                    stream.push(data);
+                }
+                cb(err);
+            });
+        });
     });
-  });
 };

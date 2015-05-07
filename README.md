@@ -1,7 +1,7 @@
-mongoose-write-stream
-=====================
+mongoose-write-stream-th2
+=========================
 
-Super simple mongoose plugin that adds writable streams to your models.
+Super simple mongoose plugin that adds writable streams to your models using [through2@1](https://github.com/rvagg/through2/tree/v1.0).
 
 ## Example
 
@@ -12,7 +12,7 @@ var request  = require('request');
 var zlib     = require('zlib');
 
 mongoose.connect('mongodb://127.0.0.1:27017/example');
-mongoose.plugin(require('mongoose-write-stream'));
+mongoose.plugin(require('mongoose-write-stream-th2'));
 
 var Tick = mongoose.model('Tick', {
   time: Number,
