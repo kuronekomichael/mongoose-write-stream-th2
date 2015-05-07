@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-write-stream-th2",
+  "name": "mongoose-write-stream",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kuronekomichael/mongoose-write-stream-th2.git"
+    "url": "https://github.com/ashaffer/mongoose-write-stream.git"
   },
   "keywords": [
     "mongoose",
@@ -17,17 +17,15 @@
     "stream",
     "mongoose",
     "write",
-    "stream",
-    "stream3",
-    "through2"
+    "stream"
   ],
-  "author": "ashaffer featuring kuronekomichael",
+  "author": "ashaffer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kuronekomichael/mongoose-write-stream-th2/issues"
+    "url": "https://github.com/ashaffer/mongoose-write-stream/issues"
   },
-  "homepage": "https://github.com/kuronekomichael/mongoose-write-stream-th2",
+  "homepage": "https://github.com/ashaffer/mongoose-write-stream",
   "dependencies": {
-    "through2": ">=1.0.0"
+    "through": "^2.3.4"
   }
 }
